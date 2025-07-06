@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&family=Notable&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Beth+Ellen&family=Montserrat:ital,wght@0,900;1,900&family=Notable&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat";
+}
+
+html {
+  overflow: hidden;
+  animation: flow 0.25s linear 2.8s forwards;
+}
+
+:root {
+  --bg-color: #020407;
+  --lower-color: #d2010d;
+  --hover-color: #ff5e6b;
+}
+
+.halfRed {
+  position: absolute;
+  z-index: -1;
+  top: 4%;
+  height: 35rem;
+  opacity: 0;
+  animation: fade 0.25s ease-out 2s forwards;
+}
+
+.model {
+  position: absolute;
+  top: 2%;
+  left: 32%;
+  z-index: 999;
+  height: 55rem;
+  animation: entrance 2.5s forwards;
+}
+
+section.body {
+  height: 200vh;
+}
+
+.hero-section {
+  a,
+  .material-symbols-outlined {
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      color: var(--hover-color);
+      font-weight: 500;
+    }
+  }
+  height: 100svh;
+  header {
+    img {
+      aspect-ratio: 1/1;
+      height: 5rem;
+      transform: translateY(-300%);
+      animation: down 1s ease-out 1.5s forwards;
+    }
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    .firstHeader {
+      display: flex;
+      gap: 8rem;
+      transform: translateY(-300%);
+      animation: down 1s ease-out 1.9s forwards;
+    }
+    .lastHeader {
+      display: flex;
+      gap: 6rem;
+      transform: translateY(-300%);
+      animation: down 1s ease-out 1.9s forwards;
+    }
+    .social {
+      display: flex;
+      gap: 0.8rem;
+      transform: translateY(-300%);
+      animation: down 1s ease-out 2.2s forwards;
+    }
+    .box span {
+      font-size: 3rem;
+      margin-right: 5rem;
+      transform: translateY(-300%);
+      animation: down 1s ease-out 2.1s forwards;
+    }
+  }
+  .hero {
+    height: 100%;
+    position: relative;
+  }
+  .midCicle {
+    display: flex;
+    justify-content: center;
+    height: 50svh;
+    h1 {
+      font-size: 23rem;
+      transform: translateY(-34%);
+      font-family: "poppins";
+    }
+    opacity: 0;
+    animation: fade 0.25s ease-out 2.1s forwards;
+  }
+  .lower {
+    display: flex;
+    justify-content: space-between;
+    height: 40svh;
+    padding: 0 3rem;
+
+    .leftSide {
+      animation: slideIn 1s ease-in-out 2.5s forwards;
+      transform: translateX(-113%);
+      width: 20rem;
+      line-height: 2rem;
+
+      .nike {
+        font-size: 2.5rem;
+        font-family: "poppins";
+      }
+
+      .parkaText {
+        font-family: "Notable", sans-serif;
+        padding-top: 1.5rem;
+        padding-left: 0.3rem;
+        font-size: 2.5rem;
+      }
+
+      .xText {
+        font-family: "Beth Ellen", cursive;
+        margin-bottom: 1rem;
+        font-size: 3rem;
+      }
+
+      .toptext {
+        display: flex;
+        gap: 0.3rem;
+        align-items: center;
+        padding-bottom: 1rem;
+      }
+
+      span.redText {
+        background-color: var(--lower-color);
+        padding: 0.4rem 0.8rem;
+        color: white;
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.4rem 0.8rem;
+        background-color: var(--bg-color);
+        width: 55%;
+        border-radius: 15px;
+        margin-top: 0.4rem;
+        p,
+        .fa-arrow-up-right-from-square {
+          color: white;
+        }
+      }
+    }
+    .right {
+      animation: slideIn 1s ease-in-out 2.5s forwards;
+      transform: translateX(130%);
+      display: flex;
+      align-items: center;
+      img {
+        height: 10rem;
+      }
+    }
+  }
+}
+
+@keyframes entrance {
+  0% {
+    transform: scale(1);
+    animation-timing-function: ease-out;
+  }
+  20%,
+  80% {
+    transform: scale(1.2);
+    animation-timing-function: cubic-bezier(0.12, 0.88, 0.46, 0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes down {
+  to {
+    transform: translateY(0%);
+    z-index: 999;
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes flow {
+  to {
+    overflow-y: visible;
+  }
+}
