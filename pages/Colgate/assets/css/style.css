@@ -1,0 +1,426 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,900;1,900&family=Sansita:ital,wght@0,400;0,700;0,800;0,900;1,400;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat";
+}
+
+:root {
+  --red-color: #d2010d;
+  --hover-color: #ff3131;
+  --black-color: #232323;
+  --online-color: #7ed957;
+  --bg-color: #f2f2f2;
+  --nav-color: #ffffff;
+  --gray-color: #9a9a9a;
+}
+
+.header-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  animation: toFade 3s linear forwards;
+  background-color: #d2010d;
+  height: 100svh;
+  width: 100svw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-icon img {
+  aspect-ratio: 1/1;
+  height: 20rem;
+}
+
+body {
+  background: var(--bg-color);
+  overflow-x: hidden;
+}
+
+html {
+  height: 100svh;
+  overflow: hidden;
+  animation: overFlow 5s linear forwards;
+}
+
+nav {
+  position: relative;
+}
+
+#logoColgate {
+  position: absolute;
+  height: 4rem;
+  left: 6rem;
+  top: -4.5rem;
+  animation: scrollDown 2s ease 2s forwards;
+  cursor: pointer;
+  border-radius: 0 0 20px 20px;
+}
+
+header {
+  height: 12svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  position: relative;
+  nav {
+    border-radius: 30px;
+    img {
+      aspect-ratio: 1/1;
+      height: 2rem;
+    }
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--nav-color);
+
+    .middle {
+      display: flex;
+      gap: 4rem;
+      margin-left: 10rem;
+      a {
+        text-decoration: none;
+        color: black;
+        &:hover {
+          color: var(--hover-color);
+        }
+      }
+      .active {
+        color: var(--red-color);
+      }
+    }
+
+    .last {
+      padding-right: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      .profile {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        border: 1px solid;
+        border-radius: 40px;
+        padding: 0.2rem;
+        position: relative;
+      }
+
+      .profile::after {
+        content: "";
+        position: absolute;
+        height: 0.8rem;
+        width: 0.8rem;
+        background: var(--online-color);
+        top: 0;
+        right: 2.4rem;
+        border-radius: 50%;
+        border: 1px white solid;
+      }
+    }
+
+    .last > * {
+      cursor: pointer;
+    }
+  }
+}
+
+section {
+  height: 90svh;
+  display: flex;
+  padding: 0.5rem 2rem;
+  .left {
+    padding-left: 2rem;
+    width: 55%;
+    #upper h1 {
+      letter-spacing: 0.4rem;
+      font-size: 5rem;
+      font-weight: 400;
+      .leftSpan {
+        font-weight: 700;
+      }
+    }
+    #upper img {
+      max-width: 90%;
+      height: 6rem;
+      border-radius: 10px;
+      vertical-align: middle;
+      opacity: 0;
+      animation: scale 1s ease-in 2.4s forwards;
+    }
+
+    .lower {
+      transform: translateY(100%);
+      animation: slideUp 1s ease-in 2.4s forwards;
+      background: url(../img/img_2.png);
+      background-size: cover;
+      height: 47%;
+      width: 95%;
+      border-radius: 20px;
+      position: relative;
+      .floatLower {
+        background-color: var(--bg-color);
+        position: absolute;
+        width: 12rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        bottom: 0%;
+        padding: 0.5rem 0;
+        border-radius: 0 20px 0 0;
+        cursor: pointer;
+        .circleContainer {
+          display: flex;
+          align-items: center;
+          padding: 0.3rem;
+          border-radius: 50%;
+          background-color: black;
+          span {
+            color: white;
+          }
+        }
+
+        &:hover {
+          color: var(--hover-color);
+          .circleContainer {
+            background-color: var(--hover-color);
+          }
+        }
+      }
+    }
+  }
+  .right {
+    width: 45%;
+
+    .upperRight {
+      height: 19rem;
+      padding-top: 4rem;
+      .toggle {
+        display: flex;
+        gap: 1rem;
+
+        div {
+          padding: 0.4rem 0.8rem;
+          border: 1px solid;
+          border-radius: 20px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--hover-color);
+            color: white;
+          }
+        }
+      }
+
+      .toggle div:nth-child(2) {
+        background-color: black;
+        color: white;
+        &:hover {
+          background-color: var(--hover-color);
+          color: white;
+        }
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        margin-top: 2rem;
+        button {
+          padding: 0.5rem 0.6rem;
+          border-radius: 15px;
+          border: none;
+          background-color: var(--hover-color);
+          color: white;
+          font-family: "poppins";
+          font-weight: bold;
+        }
+
+        .circleContainer {
+          display: flex;
+          padding: 0.3rem;
+          border: none;
+          border-radius: 50%;
+          background-color: var(--hover-color);
+          span {
+            color: white;
+          }
+        }
+      }
+
+      .btn button:hover,
+      .btn .circleContainer:hover {
+        cursor: pointer;
+        background-color: #ff5a5a;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--gray-color);
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--hover-color);
+        }
+      }
+
+      p {
+        max-width: 30rem;
+        text-align: justify;
+        margin: 2rem 0 0 1rem;
+      }
+    }
+
+    .lowerRight {
+      height: 50%;
+      img {
+        height: 5rem;
+      }
+    }
+
+    .lowerRight {
+      display: flex;
+      gap: 1rem;
+      .brush {
+        background: url(../img/img_3.png);
+        transform: translateY(100%);
+        animation: slideUp 1s ease-in 2.6s forwards;
+        padding: 1rem;
+        background-size: cover;
+        height: 17.5rem;
+        width: 30rem;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        p {
+          max-width: 10rem;
+        }
+
+        .circleContainer {
+          display: flex;
+          padding: 0.5rem;
+          border-radius: 50%;
+          background-color: black;
+          color: white;
+
+          &:hover {
+            background-color: var(--hover-color);
+            cursor: pointer;
+          }
+        }
+      }
+      .help {
+        transform: translateY(100%);
+        animation: slideUp 1s ease-in 2.8s forwards;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 17.5rem;
+        padding: 1rem;
+        background-color: black;
+        color: white;
+        font-family: "Arial";
+        border-radius: 10px;
+        .title {
+          font-weight: 900;
+        }
+
+        .question .choose {
+          display: flex;
+          justify-content: center;
+          padding: 0.4rem 0.8rem;
+          border-radius: 10px;
+          margin-top: 0.3rem;
+          background-color: #2a2a2a;
+          border: none;
+          cursor: pointer;
+          color: rgb(160, 160, 160);
+          p {
+            font-size: 1rem;
+          }
+          &:hover {
+            background-color: #363636;
+            color: white;
+          }
+        }
+        .getStarted {
+          display: flex;
+          justify-content: center;
+          padding: 0.4rem 0.8rem;
+          border-radius: 10px;
+          background-color: white;
+          color: black;
+          font-weight: 900;
+          cursor: pointer;
+          &:hover {
+            color: var(--hover-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+section.body {
+  height: 100svh;
+}
+
+@keyframes toFade {
+  0%,
+  80% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes overFlow {
+  0%,
+  80% {
+    height: 100svh;
+  }
+  to {
+    overflow-y: auto;
+  }
+}
+
+@keyframes scrollDown {
+  to {
+    top: -0.1rem;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0%);
+  }
+}
