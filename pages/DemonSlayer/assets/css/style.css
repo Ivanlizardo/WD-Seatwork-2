@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: "Montserrat";
+}
+
+:root {
+  --bg-color: #020407;
+  --lower-color: #ff4655;
+  --hover-color: #ff5e6b;
+}
+
+.vignette {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+}
+
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -2;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+html {
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+  position: relative;
+}
+
+.hero-section {
+  height: 100svh;
+  header {
+    padding: 1rem 2rem;
+    display: flex;
+    img {
+      aspect-ratio: 1/1;
+      height: 4.5rem;
+    }
+
+    .firstHeader {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      a {
+        text-decoration: none;
+      }
+
+      a.active {
+        font-weight: 900;
+        color: var(--lower-color);
+      }
+
+      a:hover {
+        color: var(--hover-color);
+      }
+    }
+
+    .lastHeader {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      position: relative;
+      img {
+        height: 2.5rem;
+      }
+    }
+    .lastHeader::after {
+      content: "";
+      height: 1rem;
+      width: 1rem;
+      background-color: greenyellow;
+      position: absolute;
+      top: 0.8rem;
+      left: 8.7rem;
+      border-radius: 50%;
+      border: white 2px solid;
+    }
+  }
+
+  section.hero {
+    padding-left: 1rem;
+    position: relative;
+    .description {
+      padding-left: 2rem;
+      text-align: justify;
+      width: 30rem;
+    }
+    img {
+      aspect-ratio: 1/1;
+      height: 20rem;
+    }
+    .btn {
+      width: 30rem;
+      display: flex;
+      gap: 1.3rem;
+      padding-left: 2.2rem;
+      margin-top: 1.4rem;
+
+      #btn1,
+      #btn2 {
+        display: flex;
+        gap: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.349);
+        padding: 0.4rem 0.8rem;
+        border-radius: 0.6rem;
+        align-items: center;
+
+        &:hover {
+          background-color: #ffaab18a;
+          cursor: pointer;
+        }
+
+        &:active {
+          scale: 0.9;
+        }
+      }
+      #btn1 {
+        background-color: white;
+        p,
+        .fa-play {
+          color: rgb(0, 0, 0);
+          font-weight: bold;
+        }
+      }
+    }
+    .side {
+      position: absolute;
+      display: flex;
+      gap: 0.5rem;
+      right: 0;
+      top: 92%;
+      align-items: center;
+      .umnute {
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 0.5rem 1rem;
+        margin-right: 0.3rem;
+        position: relative;
+        z-index: 2;
+        animation: fade 10s ease-in forwards;
+      }
+
+      .umnute::after {
+        top: 35%;
+        right: -10%;
+        z-index: 1;
+        content: "";
+        position: absolute;
+        margin-left: 8px;
+        width: 0;
+        height: 0;
+        border-top: 6px solid transparent;
+        border-bottom: 6px solid transparent;
+        border-left: 10px solid rgba(255, 255, 255, 0.322);
+        animation: fade 10s ease-in forwards;
+      }
+
+      .age {
+        cursor: pointer;
+        background-color: rgba(255, 255, 255, 0.144);
+        color: rgb(255, 255, 255);
+        padding: 0.4rem 0.8rem;
+        border-left: 2px solid white;
+      }
+      .speaker {
+        cursor: pointer;
+        background-color: white;
+        padding: 0.3rem;
+        border-radius: 50%;
+        .fa-volume-high {
+          color: black;
+        }
+        &:hover .fa-volume-high {
+          color: var(--hover-color);
+        }
+        &:active {
+          scale: 0.9;
+        }
+      }
+    }
+  }
+}
+
+section.body {
+  height: 200svh;
+}
+@keyframes fade {
+  0%,
+  10% {
+    opacity: 0;
+  }
+  11%,
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
