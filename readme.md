@@ -11,7 +11,7 @@
 </div>
 <!-- TODO: Make a short description -->
 <div align="center">
-  This project demonstrates my skills in creating Hero sections. It features entrance animations to improve the overall aesthetic.
+  This project demonstrates my skills in creating Hero sections. It features entrance animations to improve the overall aesthetic. Please note that the hero sections are not yet responsive, and the images shown on card hover are in fixed positions. I'm still practicing and improving my responsive design skills.
 </div>
 
 <br />
