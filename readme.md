@@ -11,7 +11,7 @@
 </div>
 <!-- TODO: Make a short description -->
 <div align="center">
-  This project is demonstrating my skills in making Hero-sections.
+  This project demonstrates my skills in creating Hero sections. It features entrance animations to improve the overall aesthetic.
 </div>
 
 <br />
@@ -50,15 +50,17 @@
 
 ## Overview
 
-This project is demonstrating my skills in creating a functional and stylish header and footer. I also added features such as responsiveness and animation to practice modern web design techniques. The website includes hover effects, scroll animations, and a burger menu for mobile users. Its clean layout, smooth interactions, and user-friendly navigation reflect my growth in front-end development and attention to user experience.
+This project enhances my design skills using HTML and CSS. It focuses on creating clean layouts and smooth animations. I also used simple JavaScript to add basic functionality. Overall, it helped me practice combining design and interactivity.
 
 ### Key Components
 
 - Multi Page Website
 - Hover effects
-- Main page and website#5 is responsive
-- Have icons for navigationg each website
-- Scroll animation (website#4)
+- Entrance Animation
+- blur effects
+- Javascript
+- Flip card animation
+- Home Icon to go back main page
 
 ### Technology
 
@@ -66,6 +68,7 @@ This project is demonstrating my skills in creating a functional and stylish hea
 
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 ## Rules, Practices and Principles
 
@@ -106,6 +109,10 @@ WD-ProjectName
 
 <!-- TODO: Add References -->
 
-| Title      | Purpose                                               | Link                     |
-| ---------- | ----------------------------------------------------- | ------------------------ |
-| Text icons | Use svg icons to easily edit when hovered, style, etc | https://fontawesome.com/ |
+| Title        | Purpose                                                       | Link                           |
+| ------------ | ------------------------------------------------------------- | ------------------------------ |
+| Text icons   | Use svg icons to easily edit when hovered, style, etc         | https://fontawesome.com/       |
+| Google Fonts | To use Montserrat font which provide readable and modern look | https://fonts.google.com/      |
+| Pinterest    | For easy idea gathering of design                             | https://ph.pinterest.com/      |
+| Canva        | For making my logo                                            | https://https://www.canva.com/ |
+| Photoshop    | For making my logo less pixalated                             | Application                    |
