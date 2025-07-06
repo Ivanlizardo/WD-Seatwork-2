@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap");
+@import url("https://fonts.cdnfonts.com/css/valorant");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-family: "Montserrat";
+}
+
+:root {
+  --bg-color: #020407;
+  --lower-color: #ff4655;
+  --hover-color: #ff5e6b;
+}
+
+html {
+  overflow-y: hidden;
+  animation: reveal 0.1s linear 7s forwards;
+}
+
+body {
+  background-color: var(--bg-color);
+  overflow-x: hidden;
+}
+
+.loadingLogo {
+  position: absolute;
+  z-index: 1001;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 15rem;
+  animation: logo 1s linear 2s forwards;
+}
+
+#riot {
+  animation: logo1 2s linear 3.5s forwards;
+  opacity: 0;
+}
+
+.bgLogo {
+  position: absolute;
+  height: 100svh;
+  width: 100svw;
+  background-color: var(--bg-color);
+  z-index: 1000;
+  animation: bgFade 0.1s linear 5.5s forwards;
+}
+
+.hero-section {
+  position: relative;
+  height: 100svh;
+  padding: 1rem 3rem 0 3rem;
+  header {
+    padding-bottom: 1rem;
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .middle {
+      display: flex;
+      gap: 2rem;
+      a.active {
+        color: var(--lower-color);
+        font-weight: 900;
+      }
+      a {
+        text-decoration: none;
+        &:hover {
+          color: var(--hover-color);
+        }
+        position: relative;
+      }
+      a:hover::after {
+        width: 100%;
+      }
+      a::after {
+        position: absolute;
+        content: "";
+        height: 0.1rem;
+        width: 0%;
+        bottom: -20%;
+        left: 0;
+        background-color: var(--lower-color);
+        transition: all 0.4s ease;
+      }
+    }
+    img {
+      height: 3.5rem;
+    }
+    button {
+      cursor: pointer;
+      padding: 0.4rem 0.8rem;
+      background-color: var(--lower-color);
+      clip-path: polygon(
+        0% 0%,
+        90% 0%,
+        100% 40%,
+        100% 100%,
+        12% 100%,
+        /*  */ 0% 70%
+      );
+
+      &:hover {
+        background-color: var(--hover-color);
+      }
+      &:active {
+        scale: 0.95;
+      }
+    }
+  }
+}
+
+.bgImg {
+  position: absolute;
+  z-index: -1;
+  height: 123svh;
+  top: 0;
+  left: 0;
+}
+
+.section {
+  height: 89%;
+  display: flex;
+  position: relative;
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    animation: openLeft 0.25s ease 7s forwards;
+    opacity: 0;
+    .upperLeft {
+      padding-top: 2rem;
+      h1 {
+        font-family: "VALORANT", sans-serif;
+        font-size: 7rem;
+      }
+    }
+    .middleLeft {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      p.title {
+        font-size: 1.4rem;
+        font-weight: 900;
+      }
+      p.description {
+        max-width: 30rem;
+        text-align: justify;
+      }
+    }
+    .lowerLeft {
+      margin-top: 4rem;
+      background-color: var(--lower-color);
+      position: absolute;
+      bottom: 10%;
+      left: -5%;
+      padding: 0.6rem 1.2rem;
+      width: 34rem;
+      clip-path: polygon(0% 0%, 96% 0, 100% 40%, 100% 100%, 0% 100%);
+      p {
+        padding-left: 5rem;
+      }
+    }
+  }
+  .right {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    .Float {
+      position: absolute;
+      display: block;
+    }
+
+    #jett {
+      z-index: 1;
+      height: 60rem;
+      left: -54%;
+      top: 100%;
+      animation: swipeUp 0.75s ease-in-out 7s forwards;
+    }
+    #logo {
+      height: 45rem;
+      left: 3.5rem;
+      top: 100%;
+      animation: swipeUp 0.75s ease-in-out 7s forwards;
+    }
+  }
+}
+.section::after {
+  content: "";
+  position: absolute;
+  height: 0.2rem;
+  width: 120%;
+  bottom: 3%;
+  left: -10%;
+  background-color: rgba(255, 255, 255, 0.363);
+  z-index: 1;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: end;
+  margin-top: 28rem;
+  z-index: 999;
+  font-size: 1.4rem;
+  &:hover {
+    color: var(--hover-color);
+    cursor: pointer;
+  }
+}
+
+section.body {
+  height: 200svh;
+}
+
+@keyframes logo {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes logo1 {
+  0% {
+    opacity: 0;
+  }
+  50%,
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes bgFade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: -111;
+  }
+}
+
+@keyframes openLeft {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes swipeUp {
+  to {
+    top: 0%;
+  }
+}
+
+@keyframes reveal {
+  to {
+    overflow-y: visible;
+  }
+}
