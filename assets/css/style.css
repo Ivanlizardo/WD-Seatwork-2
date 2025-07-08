@@ -11,12 +11,22 @@
   --red-color: #d2010d;
 }
 
+.bgWhite {
+  height: 100svh;
+  width: 100svw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(228, 228, 228);
+  z-index: 3;
+}
+
 .pic {
   height: 101vh;
   top: 0;
   left: 0%;
   position: absolute;
-  z-index: 1;
+  z-index: 3;
 }
 
 section {

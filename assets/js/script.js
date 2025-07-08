@@ -6,19 +6,26 @@ const images = {
   card5: document.getElementById("pic5"),
 };
 
+const bgWhite = document.querySelector(".bgWhite");
 const cards = document.querySelectorAll(".card-back");
 
 cards.forEach((card) => {
   card.addEventListener("mouseenter", () => {
     Object.values(images).forEach((img) => {
-      img.style.opacity = "0";
+      img.style.display = "none";
     });
 
     const id = card.id;
-    images[id].style.opacity = "1";
+    images[id].style.display = "block";
+
+    // Hide .bgWhite when a card is hovered
+    bgWhite.style.display = "none";
   });
 
   card.addEventListener("mouseleave", () => {
-    images[card.id].style.opacity = "0";
+    images[card.id].style.display = "none";
+
+    // Show .bgWhite back when mouse leaves the card
+    bgWhite.style.display = "block";
   });
 });
